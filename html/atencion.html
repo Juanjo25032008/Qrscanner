@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/atencion.css">
+    <script src="/js/atencion.js"></script>
+    <title>Attendance V</title> 
+</head>
+<body>
+    <header>
+            <nav class="nave">
+                <a class="one" href="quees.html">¿Que es Attendance V?</a>
+                <a class="two" href="nosotros.html">Nosotros</a>
+                <a class="three" href="atencion.html">Atención al cliente</a>
+            </nav>
+    </header>
+        <div class="img">
+        <a href="index.html">
+        <img class="logo" src="/images/logo c.png">
+        </a>
+        </div>
+        <div class="tit">
+            <p>En Attendance V estamos dedicados a ofrecerte el mejor servicio posible. 
+            Si tienes alguna duda o necesitas asistencia, estamos aquí para ayudarte.</p>
+        </div>
+        <div class="inf">
+            <h2>Medios de contacto</h2>
+            <a href=""><i class='bx bx-phone'><p>Teléfono</p></i></a>
+            <a href=""><i class='bx bxl-whatsapp'><p>WhatsApp</p></i></a>
+            <a href=""><i class='bx bxl-instagram'><p>Instagram</p></i></a>
+            <a href=""><i class='bx bxl-facebook-circle' ><p>Facebook</p></i></a>
+            <a href=""><i class='bx bxl-twitter'><p>Twitter</p></i></a>
+        </div>
+        <div class="atencion">
+            <div class="at">
+                <p>Tu satisfacción es nuestra prioridad. No dudes en comunicarte con nosotros.</p>
+            </div>
+            <div class="hor">
+                <p>Nuestro horario de atención es de lunes a viernes de 9:00 a.m. a 6:00 p.m.</p>
+            </div>   
+            <div class="con">
+                <form action="atencion_cliente.php" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>        
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    <button><a href="mailto:juanjoseorvi2008@gmail.com?subject=Asunto%20del%20correo&body=Este%20es%20el%20cuerpo%20del%20mensaje">Enviar</a></button>
+                </form>    
+            </div> 
+        </div>
+</body>
+</html>

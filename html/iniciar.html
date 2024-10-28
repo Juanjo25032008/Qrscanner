@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualización de Escaneos QR</title>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+    <style>
+        #output { margin-top: 20px; text-align: center; font-size: 1.5em; }
+    </style>
+</head>
+<body>
+    <h1>Último Escaneo QR</h1>
+    <div id="output">Esperando escaneo...</div>
+    <script>
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBg-FY0EeFq4i-G3Q29IGflDpbtPnKFZ_0",
+    authDomain: "attendance-v-80ce8.firebaseapp.com",
+    databaseURL: "https://attendance-v-80ce8-default-rtdb.firebaseio.com",
+    projectId: "attendance-v-80ce8",
+    storageBucket: "attendance-v-80ce8.appspot.com",
+    messagingSenderId: "907078311546",
+    appId: "1:907078311546:web:d82c30a14a85060b09a5c3",
+    measurementId: "G-LH8G46955J"
+    };
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
+        database.ref('scans').on('value', (snapshot) => {
+            const data = snapshot.val();
+            const lastScan = Object.values(data).pop();
+
+            if (lastScan) {
+                document.getElementById('output').innerHTML = 
+                    `Código: ${Object.keys(data).pop()}<br>Hora: ${lastScan.timestamp}`;
+            }
+        });
+    </script>
+</body>
+</html>
